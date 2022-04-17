@@ -9,7 +9,7 @@ area = pd.read_csv('poligono_de_medellin.csv', sep=';')
 area['geometry'] = area['geometry'].apply(wkt.loads)
 area = gpd.GeoDataFrame(area)
 
-# Recoge los datos de las calles
+# Recoge los datos de las calles con su riesgo de acoso
 edges = pd.read_csv('calles_de_medellin_con_acoso.csv', sep=';')
 listaCalles = nx.from_pandas_edgelist(edges, source='origin', target='destination', edge_attr='length')
 edges['geometry'] = edges['geometry'].apply(wkt.loads)
