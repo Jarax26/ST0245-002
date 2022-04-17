@@ -37,7 +37,7 @@ plt.title("Longitud en metros de las calles de Medellín")
 plt.tight_layout()
 plt.savefig("mapa-de-called-con-longitud.png")
 
-# Implementación de dijkstra
+# Implementación de dijkstra para encontrar la ruta más corta
 
 i = int(input('Rutas a encontrar >>> '))
 
