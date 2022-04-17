@@ -39,12 +39,12 @@ plt.savefig("mapa-de-called-con-longitud.png")
 
 # Implementación de dijkstra
 
-i = int(input('Rutas a encontrar >>>'))
+i = int(input('Rutas a encontrar >>> '))
 
 while i > 0:
     a = input('Ingrese un origen >>> ')
     b = input('Ingrese un destino >>> ')
-    c = input()
+    c = input('Ingrese un peso >>> ')
     djk_path = nx.dijkstra_path(listaCalles, source=a, target=b, weight=c)
     print(djk_path)
     i -= 1
