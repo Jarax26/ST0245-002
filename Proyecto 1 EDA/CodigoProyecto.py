@@ -39,12 +39,7 @@ plt.savefig("mapa-de-called-con-longitud.png")
 
 # Implementación con dijkstra para encontrar la ruta más corta
 
-i = int(input('Rutas a encontrar >>> '))
-
-while i > 0:
-    a = input('Ingrese un origen >>> ')
-    b = input('Ingrese un destino >>> ')
-    c = input('Ingrese un peso >>> ')
-    djk_path = nx.dijkstra_path(listaCalles, source=a, target=b, weight=c)
-    print(djk_path)
-    i -= 1
+a = input('Ingrese la coordenada del origen >>> ')
+b = input('Ingrese la coordenada del destino >>> ')
+shortest_route = nx.dijkstra_path(listaCalles, source=a, target=b, weight='length')
+print(shortest_route)
